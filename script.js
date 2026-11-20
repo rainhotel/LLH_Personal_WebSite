@@ -113,75 +113,55 @@
   // Project case-study dialog: concise, public-safe descriptions grounded in project context.
   const projectDetails = {
     campusbites: {
-      kicker: 'INDEPENDENT PRODUCT / CAMPUSBites',
-      title: 'CampusBites — 校园老吃家',
-      summary: 'A campus food community and decision product designed around trusted student participation, useful shop information, and better everyday food choices.',
-      points: [
-        'Student-oriented identity and content trust: WeChat login and student verification workflows.',
-        'Core community loop: shop discovery, reviews, comments, moderation, and shop recommendations.',
-        'Decision experience: “今天吃什么” weighted recommendation flow.',
-        'Current exploration: shop and dish semantics, AI retrieval, conversational recommendations, and QQBot end-to-end workflows.'
-      ],
-      tags: ['Java 17', 'Spring Boot', 'MyBatis-Plus', 'MySQL', 'Redis', 'WeChat Mini Program', 'Vant Weapp', 'AI Retrieval'],
-      note: 'The primary product repositories are private. This page describes product scope and engineering direction without exposing private source code, credentials, user data, or unfinished work as shipped functionality.',
-      link: '',
-      linkLabel: ''
+      kicker: 'INDEPENDENT PRODUCT / CAMPUSBites', title: 'CampusBites — 校园老吃家',
+      summaryZh: '面向高校学生的校园美食社区与决策产品，围绕可信评价、店铺发现和日常饮食决策，持续探索从内容沉淀到智能推荐的产品闭环。',
+      summaryEn: 'A campus food community and decision product designed around trusted student participation, useful shop information, and better everyday food choices.',
+      pointsZh: ['用户信任：微信登录与学生身份认证相关流程。','社区闭环：店铺发现、评价、评论、内容审核与新店推荐。','决策体验：“今天吃什么”加权推荐流程。','当前探索：店铺与菜品语义理解、AI 检索、对话式推荐和 QQBot 全链路。'],
+      pointsEn: ['Student-oriented identity and content trust: WeChat login and student verification workflows.','Core community loop: shop discovery, reviews, comments, moderation, and shop recommendations.','Decision experience: a weighted “what to eat” recommendation flow.','Current exploration: shop and dish semantics, AI retrieval, conversational recommendations, and QQBot end-to-end workflows.'],
+      tags: ['Java 17','Spring Boot','MyBatis-Plus','MySQL','Redis','WeChat Mini Program','Vant Weapp','AI Retrieval'],
+      noteZh: '核心产品仓库为私有仓库。本页只介绍产品范围与工程方向，不公开私有源代码、凭据、用户数据，也不会把尚在迭代的探索描述成已上线功能。',
+      noteEn: 'The primary product repositories are private. This page describes product scope and engineering direction without exposing private source code, credentials, user data, or unfinished work as shipped functionality.'
     },
     weoam: {
-      kicker: 'PRIVATE PROJECT / WECHAT OAM',
-      title: 'WeChatOAM — Official Account Management',
-      summary: 'A Java backend project for managing WeChat Official Account operations and content workflows.',
-      points: [
-        'Integrates WeChat Official Account APIs for authorization, media, drafts, and analytics-related workflows.',
-        'Includes document and archive processing paths, with DOCX-to-HTML and Markdown-related capabilities reflected in project dependencies and docs.',
-        'Uses a conventional layered backend foundation with persistence, cache, search, and object storage integrations.'
-      ],
-      tags: ['Java 17', 'Spring Boot 3.4.5', 'MyBatis-Plus', 'MySQL', 'Redis', 'Elasticsearch', 'Tencent COS', 'Weixin Java'],
-      note: 'Repository is private. The technology list is based on the repository build configuration; this summary intentionally avoids exposing internal endpoints or configuration.',
-      link: '',
-      linkLabel: ''
+      kicker: 'PRIVATE PROJECT / WECHAT OAM', title: 'WeChatOAM — Official Account Management',
+      summaryZh: '基于 Java 的微信公众号运营管理后端，覆盖公众号 API 集成、素材与草稿管理、统计相关接口，以及文档和压缩包处理流程。',
+      summaryEn: 'A Java backend for WeChat Official Account operations, covering API integration, media and draft management, analytics endpoints, and document/archive processing.',
+      pointsZh: ['集成微信公众号 API，支撑授权、素材、草稿和统计相关工作流。','包含文档与压缩包处理路径，项目依赖和文档中体现了 DOCX 转 HTML、Markdown 等能力。','采用分层后端结构，结合持久化、缓存、搜索和对象存储能力。'],
+      pointsEn: ['Integrates WeChat Official Account APIs for authorization, media, drafts, and analytics-related workflows.','Includes document and archive processing paths, with DOCX-to-HTML and Markdown-related capabilities reflected in project dependencies and docs.','Uses a conventional layered backend foundation with persistence, cache, search, and object storage integrations.'],
+      tags: ['Java 17','Spring Boot 3.4.5','MyBatis-Plus','MySQL','Redis','Elasticsearch','Tencent COS','Weixin Java'],
+      noteZh: '仓库为私有仓库。技术栈来自项目 pom.xml；这里仅作概括，不展示内部接口、配置和敏感信息。',
+      noteEn: 'Repository is private. The technology list is based on the repository build configuration; this summary intentionally avoids exposing internal endpoints or configuration.'
     },
     siem: {
-      kicker: 'PROFESSIONAL EXPERIENCE / SECURITY AI',
-      title: 'SIEM Agent — Security Operations',
-      summary: 'Engineering experience in applying agent workflows to security operations, with an emphasis on dependable backend integration rather than a chat-only interface.',
-      points: [
-        'Java backend work around agent tools, model integration, and orchestration.',
-        'Runtime and conversation flow concerns: tool execution, state transitions, and traceable outcomes.',
-        'Evaluation and safety checks to make agent behavior easier to inspect and improve.'
-      ],
-      tags: ['Java', 'Agent Tools', 'Model Integration', 'Runtime', 'Evaluation', 'Safety'],
-      note: 'This is a high-level description of professional experience. Employer systems, source code, internal architecture, and operational data are intentionally not disclosed.',
-      link: '',
-      linkLabel: ''
+      kicker: 'PROFESSIONAL EXPERIENCE / SECURITY AI', title: 'SIEM Agent — Security Operations',
+      summaryZh: '参与将 Agent 工作流引入安全运营场景的工程实践，重点不是单纯的聊天界面，而是可靠的后端集成、工具执行与可评测运行链路。',
+      summaryEn: 'Engineering experience in applying agent workflows to security operations, with an emphasis on dependable backend integration rather than a chat-only interface.',
+      pointsZh: ['围绕 Agent 工具、模型接入与编排开展 Java 后端开发。','关注工具执行、状态流转和可追踪结果等运行时问题。','参与评测与安全检测，让 Agent 行为更容易检查和改进。'],
+      pointsEn: ['Java backend work around agent tools, model integration, and orchestration.','Runtime and conversation flow concerns: tool execution, state transitions, and traceable outcomes.','Evaluation and safety checks to make agent behavior easier to inspect and improve.'],
+      tags: ['Java','Agent Tools','Model Integration','Runtime','Evaluation','Safety'],
+      noteZh: '这是对职业经历的高层次概述。雇主系统、源代码、内部架构和运营数据均不在此公开。',
+      noteEn: 'This is a high-level description of professional experience. Employer systems, source code, internal architecture, and operational data are intentionally not disclosed.'
     },
     browser: {
-      kicker: 'PROFESSIONAL EXPERIENCE / BROWSER AUTOMATION',
-      title: 'AI Browser Agent',
-      summary: 'A TypeScript-based browser automation experience focused on connecting agent decisions with real browser actions and structured page information.',
-      points: [
-        'Browser Agent workflow design across observation, decision, action, and verification.',
-        'Structured information extraction from dynamic web pages.',
-        'Practical attention to browser state, automation reliability, and anti-automation constraints.'
-      ],
-      tags: ['TypeScript', 'Browser Automation', 'Agent Workflow', 'Web Extraction', 'Reliability'],
-      note: 'This is a public-safe summary of professional project experience. No internal site details, proprietary anti-bot techniques, or confidential implementation are included.',
-      link: '',
-      linkLabel: ''
+      kicker: 'PROFESSIONAL EXPERIENCE / BROWSER AUTOMATION', title: 'AI Browser Agent',
+      summaryZh: '基于 TypeScript 的浏览器自动化项目实践，探索如何把 Agent 决策连接到真实浏览器动作与结构化页面信息。',
+      summaryEn: 'A TypeScript-based browser automation experience focused on connecting agent decisions with real browser actions and structured page information.',
+      pointsZh: ['围绕观察、决策、动作执行与验证设计 Browser Agent 工作流。','从动态网页中提取结构化信息。','关注浏览器状态、自动化可靠性与反自动化约束。'],
+      pointsEn: ['Browser Agent workflow design across observation, decision, action, and verification.','Structured information extraction from dynamic web pages.','Practical attention to browser state, automation reliability, and anti-automation constraints.'],
+      tags: ['TypeScript','Browser Automation','Agent Workflow','Web Extraction','Reliability'],
+      noteZh: '这是职业项目的公开安全概述，不包含内部站点细节、专有反爬策略或保密实现。',
+      noteEn: 'This is a public-safe summary of professional project experience. No internal site details, proprietary anti-bot techniques, or confidential implementation are included.'
     },
     studio: {
-      kicker: 'COLLABORATIVE DELIVERY / STUDIO',
-      title: 'Studio Projects — Engineering Delivery',
-      summary: 'Collaborative software work across business platforms, dashboards, AI-assisted tools, and automation-oriented products.',
-      points: [
-        'Translate business requirements into usable product workflows and technical scope.',
-        'Work across backend, frontend, data visualization, and integration boundaries.',
-        'Prioritize maintainability, delivery quality, and clear communication across roles.'
-      ],
-      tags: ['Product Thinking', 'Full-stack', 'System Design', 'Integration', 'Delivery'],
-      note: 'Client and partner projects are summarized at category level only. Names, private deployments, client information, and source code are not published here.',
-      link: 'https://github.com/FireOverEarth',
-      linkLabel: 'VIEW PUBLIC WORKSTUDIO PROFILE ↗'
+      kicker: 'COLLABORATIVE DELIVERY / STUDIO', title: 'Studio Projects — Engineering Delivery',
+      summaryZh: '参与工作室多类软件项目建设，覆盖业务平台、数据大屏、AI 工具和自动化流程。',
+      summaryEn: 'Collaborative software work across business platforms, dashboards, AI-assisted tools, and automation-oriented products.',
+      pointsZh: ['将业务需求转化为可用的产品流程与技术范围。','在后端、前端、数据可视化和系统集成之间协作。','关注可维护性、交付质量与跨角色沟通。'],
+      pointsEn: ['Translate business requirements into usable product workflows and technical scope.','Work across backend, frontend, data visualization, and integration boundaries.','Prioritize maintainability, delivery quality, and clear communication across roles.'],
+      tags: ['Product Thinking','Full-stack','System Design','Integration','Delivery'],
+      noteZh: '客户与合作方项目仅按类别概述，不公开客户名称、私有部署、客户信息或源代码。',
+      noteEn: 'Client and partner projects are summarized at category level only. Names, private deployments, client information, and source code are not published here.',
+      link: 'https://github.com/FireOverEarth', linkLabel: 'VIEW PUBLIC WORKSTUDIO PROFILE ↗'
     }
   };
   const dialog = $('#project-dialog');
@@ -190,16 +170,18 @@
     if (!data || !dialog) return;
     $('#dialog-kicker').textContent = data.kicker;
     $('#dialog-title').textContent = data.title;
-    $('#dialog-summary').textContent = data.summary;
+    const language = root.dataset.language === 'zh' ? 'zh' : 'en';
+    $('#dialog-summary').textContent = language === 'zh' ? data.summaryZh : data.summaryEn;
     const points = $('#dialog-points');
-    points.replaceChildren(...data.points.map(text => {
+    const activePoints = language === 'zh' ? data.pointsZh : data.pointsEn;
+    points.replaceChildren(...activePoints.map(text => {
       const li = document.createElement('li'); li.textContent = text; return li;
     }));
     const tags = $('#dialog-tags');
     tags.replaceChildren(...data.tags.map(text => {
       const span = document.createElement('span'); span.textContent = text; return span;
     }));
-    $('#dialog-note').textContent = data.note;
+    $('#dialog-note').textContent = language === 'zh' ? data.noteZh : data.noteEn;
     const link = $('#dialog-link');
     if (data.link) { link.href = data.link; link.textContent = data.linkLabel; link.hidden = false; }
     else { link.hidden = true; link.removeAttribute('href'); }
@@ -292,3 +274,4 @@
   const year = $('#current-year');
   if (year) year.textContent = String(new Date().getFullYear());
 })();
+
