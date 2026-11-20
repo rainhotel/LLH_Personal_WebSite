@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN" class="js" data-language="zh" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f1">
+  <meta name="description" content="CampusBites founder case study by LLH — a campus local-life venture connecting student discovery, merchant operations, trusted campus data, and AI-assisted decisions.">
+  <meta property="og:title" content="CampusBites — Founder Case Study / LLH">
+  <meta property="og:description" content="From a campus dining problem to a founder-led local-life product and operating system.">
+  <title>CampusBites — Founder Case Study | LLH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="campusbites.css">
+</head>
+<body class="campusbites-case">
+  <div class="scroll-progress"><span id="scroll-progress-bar"></span></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html#top" aria-label="LLH home">
+      <span class="brand-symbol">L<span>.</span></span>
+      <span class="brand-copy">LLH <small>PERSONAL SPACE</small></span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Case study navigation">
+      <a href="#venture"><span>01</span><span data-zh="创业命题" data-en="Venture">创业命题</span></a>
+      <a href="#product"><span>02</span><span data-zh="产品体系" data-en="Product">产品体系</span></a>
+      <a href="#business"><span>03</span><span data-zh="商业模型" data-en="Business">商业模型</span></a>
+      <a href="#architecture"><span>04</span><span data-zh="技术系统" data-en="System">技术系统</span></a>
+      <a href="#founder"><span>05</span><span data-zh="创始人角色" data-en="Founder">创始人角色</span></a>
+      <a href="index.html#work"><span>↗</span><span data-zh="返回作品集" data-en="Portfolio">返回作品集</span></a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button language-toggle" id="language-toggle" type="button" aria-label="Switch language">EN</button>
+      <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.3A8.7 8.7 0 0 1 8.7 3.5 8.9 8.9 0 1 0 20.5 15.3Z"/></svg>
+      </button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="cb-hero">
+      <div class="cb-wrap">
+        <div class="cb-overline"><span>INDEPENDENT VENTURE / 01</span><span>FOUNDER CASE STUDY · 2026</span></div>
+        <div class="cb-hero-grid">
+          <div class="cb-hero-copy">
+            <div class="cb-eyebrow"><i></i><span data-zh="创始人视角 · 产品与工程" data-en="FOUNDER VIEW · PRODUCT & ENGINEERING">创始人视角 · 产品与工程</span></div>
+            <h1 class="lang-zh">把校园里的<br><em>吃饭决策，</em><br>做成一门产品。</h1>
+            <h1 class="lang-en">Turn campus dining<br>into a <em>trusted local-life</em><br>product.</h1>
+            <p class="cb-hero-intro lang-zh">CampusBites（校园老吃家）是我发起并持续经营的校园本地生活产品。我以创始人身份推动产品方向、关键取舍与技术建设，也保持 hands-on：从用户端、商家端、运营后台，到 Java 后端、AI 检索和 QQBot，持续把产品从需求推进到可运行的系统。</p>
+            <p class="cb-hero-intro lang-en">CampusBites is a campus local-life venture I founded and continue to operate. I drive product direction, key trade-offs, and technical development while staying hands-on across the student app, merchant portal, operations console, Java backend, AI retrieval, and QQBot.</p>
+            <div class="cb-role-tags"><span>FOUNDER</span><span>PRODUCT STRATEGY</span><span>ENGINEERING LEADERSHIP</span><span>HANDS-ON BUILDER</span></div>
+            <div class="cb-hero-actions">
+              <a href="#venture"><span data-zh="了解创业命题" data-en="Explore the venture">了解创业命题</span><b>↓</b></a>
+              <a href="index.html#work"><span data-zh="返回个人作品集" data-en="Back to portfolio">返回个人作品集</span><b>↗</b></a>
+            </div>
+          </div>
+          <div class="cb-hero-art" aria-label="CampusBites connects students, merchants and campus operations">
+            <div class="cb-orbit cb-orbit-one"></div>
+            <div class="cb-orbit cb-orbit-two"></div>
+            <div class="cb-orbit cb-orbit-three"></div>
+            <div class="cb-art-kicker">ONE CAMPUS / ONE TRUSTED GRAPH</div>
+            <div class="cb-node cb-node-student"><span>01 / DEMAND</span><b>STUDENTS</b><small>discover · decide · contribute</small></div>
+            <div class="cb-node cb-node-merchant"><span>02 / SUPPLY</span><b>MERCHANTS</b><small>manage · serve · improve</small></div>
+            <div class="cb-node cb-node-campus"><span>03 / OPERATIONS</span><b>CAMPUS</b><small>govern · observe · coordinate</small></div>
+            <div class="cb-core"><span>LOCAL LIFE</span><b>Campus<span>Bites</span></b><small>TRUSTED DATA → BETTER DECISIONS</small></div>
+            <div class="cb-art-foot">STUDENT EXPERIENCE / MERCHANT VALUE / CAMPUS OPERATIONS</div>
+          </div>
+        </div>
+        <div class="cb-metrics">
+          <div><small>CORE PRODUCT REPOSITORIES</small><strong>04</strong><span>backend · student · admin · merchant</span></div>
+          <div><small>GITHUB PULL REQUESTS</small><strong>150</strong><span>149 merged into their target branches</span></div>
+          <div><small>BACKEND BUSINESS MODULES</small><strong>28</strong><span>current development tree</span></div>
+          <div><small>AGENT SEARCH SCENARIOS</small><strong>28</strong><span>repeatable benchmark cases</span></div>
+        </div>
+        <p class="cb-metrics-note">GitHub and repository snapshot: 2026-11-20. PR merge status includes feature / integration branches and is not a production-release metric. Benchmark scenarios are test coverage, not online accuracy or user-scale evidence.</p>
+      </div>
+    </section>
+
+    <section class="cb-section" id="venture">
+      <div class="cb-wrap">
+        <div class="cb-section-heading">
+          <div><span class="cb-index">01 / THE VENTURE THESIS</span><h2 class="lang-zh">不是再做一个点评页。<br><em>而是解决校园里的信息断层。</em></h2><h2 class="lang-en">Not another review page.<br><em>A response to fragmented campus information.</em></h2></div>
+          <p class="lang-zh">产品从一个高频、具体的问题出发：学生每天都要做吃饭决策，但店铺、菜品、价格、位置和真实体验散落在不同渠道。商户缺少持续反馈，校园运营也缺少结构化信息。CampusBites 尝试把这些信息放回同一个可治理的产品体系。</p>
+          <p class="lang-en">The product starts with a frequent, concrete decision. Students choose where and what to eat every day, yet shops, dishes, prices, locations, and real experiences are scattered. Merchants lack structured feedback, while campus operators lack a consistent information layer. CampusBites brings these pieces into one governed product system.</p>
+        </div>
+        <div class="cb-stakeholder-grid">
+          <article class="cb-stakeholder">
+            <div class="cb-card-top"><span>01 / DEMAND SIDE</span><i>↗</i></div><div class="cb-stakeholder-icon">S</div>
+            <h3>学生：更好的每一次选择</h3>
+            <p class="lang-zh">从“今天吃什么”到具体菜品与店铺，减少信息搜集成本；用真实评价、位置、预算和口味偏好辅助决策。</p>
+            <p class="lang-en">Reduce the effort behind everyday food decisions with real reviews, location, budget, dish facts, and taste preferences.</p>
+            <div class="cb-card-foot">DISCOVER / REVIEW / DECIDE</div>
+          </article>
+          <article class="cb-stakeholder">
+            <div class="cb-card-top"><span>02 / SUPPLY SIDE</span><i>↗</i></div><div class="cb-stakeholder-icon">M</div>
+            <h3>商户：把经营信息变成服务能力</h3>
+            <p class="lang-zh">维护店铺与菜品资料、管理活动、申请推广，并逐步建立从用户反馈到经营改善的工作流。</p>
+            <p class="lang-en">Maintain shop and dish information, manage activities, apply for promotion, and build a workflow from customer feedback to operational improvement.</p>
+            <div class="cb-card-foot">ONBOARD / MANAGE / GROW</div>
+          </article>
+          <article class="cb-stakeholder">
+            <div class="cb-card-top"><span>03 / CAMPUS OPERATIONS</span><i>↗</i></div><div class="cb-stakeholder-icon">C</div>
+            <h3>校园运营：让事实和反馈可治理</h3>
+            <p class="lang-zh">围绕学校、校区、生活区、食堂、地点和店铺建立统一信息结构，并通过审核、纠错和运营看板管理数据质量。</p>
+            <p class="lang-en">Organize schools, campuses, living areas, canteens, places, and shops into a consistent information model, supported by moderation, fact correction, and operations dashboards.</p>
+            <div class="cb-card-foot">STRUCTURE / GOVERN / OBSERVE</div>
+          </article>
+        </div>
+        <div class="cb-thesis-note"><b>FOUNDER'S PRODUCT THESIS</b><span class="lang-zh">先建立可信的信息与治理基础，再追求推荐效率和商业化。没有真实数据，AI 只会把不确定性包装得更漂亮。</span><span class="lang-en">Build trusted information and governance first; optimize discovery and monetization second. Without reliable facts, AI only makes uncertainty look more polished.</span></div>
+      </div>
+    </section>
+
+    <section class="cb-section cb-section-alt" id="product">
+      <div class="cb-wrap">
+        <div class="cb-section-heading">
+          <div><span class="cb-index">02 / PRODUCT SYSTEM</span><h2 class="lang-zh">一个产品，<br><em>四个相互咬合的工作面。</em></h2><h2 class="lang-en">One product.<br><em>Four connected operating surfaces.</em></h2></div>
+          <p class="lang-zh">我把校园本地生活拆成学生体验、商户工具、平台运营和 AI 服务，而不是把所有能力塞进一个小程序页面。不同角色有自己的入口，但共享同一套业务事实和治理规则。</p>
+          <p class="lang-en">CampusBites is organized into the student experience, merchant tools, platform operations, and AI services—not squeezed into a single mini-program surface. Each role has its own workflow while sharing the same business facts and governance rules.</p>
+        </div>
+        <div class="cb-surface-grid">
+          <article class="cb-surface cb-surface-student"><div class="cb-surface-icon">01</div><span>STUDENT EXPERIENCE</span><h3>用户端 · 微信小程序</h3><p class="lang-zh">学校与地点选择、首页今日菜单、店铺和菜品详情、搜索、社区评价、图文发布、饮食画像、快速推荐与 AI Meal Agent。</p><p class="lang-en">School and location selection, daily menu, shop and dish details, search, review community, publishing, taste profile, quick recommendations, and the AI Meal Agent.</p><div class="cb-stack">UNI-APP / VUE 3 / TYPESCRIPT</div></article>
+          <article class="cb-surface cb-surface-merchant"><div class="cb-surface-icon">02</div><span>MERCHANT WORKSPACE</span><h3>商家端 · 经营入口</h3><p class="lang-zh">入驻申请、店铺资料、菜品、活动和推广申请；把商户信息维护与面向学生的展示连接起来。</p><p class="lang-en">Merchant onboarding, shop profiles, dishes, activities, and promotion applications—connecting merchant-maintained information with the student-facing experience.</p><div class="cb-stack">VUE 3 / VITE / ELEMENT PLUS</div></article>
+          <article class="cb-surface cb-surface-ops"><div class="cb-surface-icon">03</div><span>OPERATIONS CONSOLE</span><h3>管理端 · 平台治理</h3><p class="lang-zh">用户认证、店铺与内容审核、地点配置、贡献治理、商业化配置、运营统计，以及 AI 模型和 QQBot 的管理与追踪。</p><p class="lang-en">User verification, shop and content moderation, location configuration, contribution governance, commerce controls, operations analytics, and AI / QQBot management and tracing.</p><div class="cb-stack">VUE 3 / TYPESCRIPT / ECHARTS</div></article>
+          <article class="cb-surface cb-surface-ai"><div class="cb-surface-icon">04</div><span>AI & AUTOMATION</span><h3>AI 服务 · 决策与自动化</h3><p class="lang-zh">Meal Agent、QQ 群 Bot、菜单结构化、店铺标签和检索评测。模型负责理解与排序，服务端负责事实、权限和最终约束。</p><p class="lang-en">Meal Agent, QQ group bot, menu structuring, shop tagging, and retrieval evaluation. Models interpret and rank; the server owns facts, permissions, and final constraints.</p><div class="cb-stack">JAVA / AGENT GRAPH / RETRIEVAL / TRACE</div></article>
+        </div>
+        <div class="cb-product-loop">
+          <div class="cb-loop-heading"><span>THE PRODUCT LOOP</span><small>FROM CAMPUS FACTS TO BETTER DECISIONS</small></div>
+          <div class="cb-loop-steps">
+            <div><small>01</small><b>STRUCTURE</b><span>school · place · shop · dish</span></div><i>→</i>
+            <div><small>02</small><b>CONTRIBUTE</b><span>reviews · posts · corrections</span></div><i>→</i>
+            <div><small>03</small><b>GOVERN</b><span>identity · moderation · audit</span></div><i>→</i>
+            <div><small>04</small><b>DISCOVER</b><span>search · ranking · agents</span></div><i>→</i>
+            <div><small>05</small><b>LEARN</b><span>events · feedback · operations</span></div>
+          </div>
+          <p class="cb-loop-note lang-zh">这是产品设计与代码模块共同指向的闭环；各环节的上线状态和数据成熟度需要分别验收。</p>
+          <p class="cb-loop-note lang-en">This loop is reflected in the product design and code modules; release status and data maturity must still be validated per capability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="business">
+      <div class="cb-wrap">
+        <div class="cb-section-heading">
+          <div><span class="cb-index">03 / BUSINESS MODEL</span><h2 class="lang-zh">技术不是终点。<br><em>产品必须找到可持续的价值交换。</em></h2><h2 class="lang-en">Technology is not the destination.<br><em>The product needs a sustainable exchange of value.</em></h2></div>
+          <p class="lang-zh">商业化不是先卖广告，而是先让学生愿意使用、商户愿意维护信息、运营方愿意依赖数据。只有三方价值成立，收费才有基础。</p>
+          <p class="lang-en">Monetization should not start with selling ad slots. Students must find value, merchants must want to maintain their information, and operators must be able to act on the data. Monetization follows only when that exchange works.</p>
+        </div>
+        <div class="cb-business-grid">
+          <article><span>01 / B2C · STUDENTS</span><h3>用户价值先行</h3><p class="lang-zh">用免费、可信的校园餐饮信息和决策体验形成使用理由，积累真实内容与行为反馈。</p><p class="lang-en">Create a reason to return through free, trusted campus food information and decision support, building authentic content and behavioral feedback.</p><b>TRUST / HABIT / DATA</b></article>
+          <article><span>02 / B2B · MERCHANTS</span><h3>商户增值服务</h3><p class="lang-zh">商家端已存在入驻、资料、菜品、活动和推广申请入口；数据洞察、精准营销和推广服务是商业化方向。</p><p class="lang-en">The merchant portal already contains onboarding, profile, dish, activity, and promotion workflows. Insights, targeted marketing, and promotion services are monetization directions.</p><b>TOOLS / PROMOTION / INSIGHTS</b></article>
+          <article><span>03 / B2G · CAMPUS</span><h3>校园运营与治理</h3><p class="lang-zh">创业计划提出校园治理看板、满意度分析和定制数据服务方向；是否形成正式合作与付费产品，需要以合同和实际交付为准。</p><p class="lang-en">The business plan explores campus governance dashboards, satisfaction analysis, and custom data services. Formal partnerships and paid delivery must be evidenced by actual agreements and deployments.</p><b>GOVERNANCE / REPORTING / SAAS</b></article>
+          <article><span>04 / C2B2C · CONTENT</span><h3>内容与活动协作</h3><p class="lang-zh">老吃家内容、商户试吃、专题活动和推广合作构成可探索的内容商业化路径；真实性披露和评价独立性必须优先。</p><p class="lang-en">Creator reviews, merchant tastings, topic campaigns, and promotion partnerships form a potential content-commerce path; disclosure and review independence come first.</p><b>CREATORS / CAMPAIGNS / DISCLOSURE</b></article>
+        </div>
+        <div class="cb-commercial-boundary"><strong>商业化边界 / COMMERCIAL PROOF</strong><p class="lang-zh">代码中可以核验商户申请、广告/推广、优惠券、活动和运营统计等产品能力。2026 年 3 月创业计划中的定价与收入预测属于规划假设，不代表已实现收入。本案例不虚构付费商户数、GMV、合同、DAU 或月收入。</p><p class="lang-en">The code contains merchant applications, ads / promotion, coupons, activities, and operations analytics. Pricing and revenue forecasts in the March 2026 business plan are planning assumptions, not realized revenue. This case does not invent paying merchants, GMV, contracts, DAU, or monthly revenue.</p></div>
+      </div>
+    </section>
+
+    <section class="cb-section cb-section-alt" id="architecture">
+      <div class="cb-wrap">
+        <div class="cb-section-heading">
+          <div><span class="cb-index">04 / ENGINEERING SYSTEM</span><h2 class="lang-zh">创业者也要理解系统。<br><em>每一层都服务于真实业务。</em></h2><h2 class="lang-en">A founder must understand the system.<br><em>Every layer serves a real workflow.</em></h2></div>
+          <p class="lang-zh">CampusBites 采用模块化单体而不是过早拆微服务：先把业务边界、数据事实、权限与运行流程做清楚，再根据真实负载决定是否拆分。</p>
+          <p class="lang-en">CampusBites uses a modular monolith rather than splitting into microservices too early. Domain boundaries, source-of-truth data, permissions, and operational flows come first; architecture evolves with real load.</p>
+        </div>
+        <div class="cb-architecture">
+          <div class="cb-arch-clients">
+            <div><b>STUDENT APP</b><span>UniApp / WeChat</span></div>
+            <div><b>MERCHANT PORTAL</b><span>Vue 3 / Vite</span></div>
+            <div><b>ADMIN CONSOLE</b><span>Vue 3 / TypeScript</span></div>
+            <div><b>QQ GROUP BOT</b><span>WebSocket / Events</span></div>
+          </div>
+          <div class="cb-arch-connector"><span>AUTH / API / DOMAIN CONTRACTS</span><i>↓</i></div>
+          <div class="cb-arch-core">
+            <div class="cb-arch-core-head"><span>JAVA 17 · SPRING BOOT</span><b>MODULAR MONOLITH</b><small>28 business modules in the current development tree</small></div>
+            <div class="cb-arch-domains"><span>Identity & School</span><span>Shop & Menu</span><span>Review & Content</span><span>Search & Recommend</span><span>Commerce & Governance</span><span>AI & QQBot</span></div>
+          </div>
+          <div class="cb-arch-connector"><i>↓</i><span>FACTS / CACHE / MEDIA / MODEL ROUTING</span></div>
+          <div class="cb-arch-data">
+            <div><b>MYSQL</b><span>authoritative business facts</span></div>
+            <div><b>REDIS</b><span>cache · lease · queue · dedupe</span></div>
+            <div><b>COS</b><span>images · media objects</span></div>
+            <div><b>MODEL PROVIDERS</b><span>planning · reranking · vision</span></div>
+          </div>
+        </div>
+        <div class="cb-principles-grid">
+          <article><span>01 / ARCHITECTURE</span><h3>先做模块化单体</h3><p class="lang-zh">以 Spring Boot 组织领域模块，复用 MySQL、Redis 和既有部署能力；不为低数据量阶段引入不必要的微服务、Kafka 或向量数据库。</p><p class="lang-en">Organize domain modules inside Spring Boot and reuse MySQL, Redis, and existing deployment infrastructure. Avoid microservices, Kafka, or vector databases before the workload justifies them.</p></article>
+          <article><span>02 / DATA OWNERSHIP</span><h3>事实必须有归属</h3><p class="lang-zh">MySQL 保存可恢复的业务事实；Redis 负责缓存、短期队列和协调。模型输出不能覆盖学校范围、店铺身份、公开状态、价格等服务端事实。</p><p class="lang-en">MySQL owns recoverable business facts; Redis handles cache, short-lived queues, and coordination. Model output cannot override school scope, shop identity, visibility, or prices.</p></article>
+          <article><span>03 / AI BOUNDARIES</span><h3>模型只做受控决策</h3><p class="lang-zh">Meal Agent 采用模型理解、工具检索、候选选择和最终校验的图式流程；硬预算、地点、店型和证据由服务端验证。</p><p class="lang-en">The Meal Agent follows a graph workflow of model interpretation, tool retrieval, candidate selection, and final validation. Budget, location, shop type, and evidence are checked server-side.</p></article>
+          <article><span>04 / RELIABILITY</span><h3>机器人不是一个 webhook</h3><p class="lang-zh">QQBot 包含 Gateway 生命周期、单活租约、事件去重、有界执行队列、心跳与重连、交互回执、失败分类和 Trace。</p><p class="lang-en">QQBot includes gateway lifecycle management, a single-active lease, event deduplication, bounded executors, heartbeats and reconnects, interaction acknowledgements, failure mapping, and traces.</p></article>
+          <article><span>05 / OBSERVABILITY</span><h3>让运营能看见系统</h3><p class="lang-zh">运营后台把模型配置、运行状态、群组策略、检索证据、重排结果和失败原因放进可追踪的工作流，而不是只显示一个“AI 已开启”。</p><p class="lang-en">The operations console connects model configuration, runtime state, group policies, retrieval evidence, reranking, and failure reasons into an observable workflow—not just an “AI enabled” switch.</p></article>
+          <article><span>06 / EVALUATION</span><h3>先建立评测，再谈效果</h3><p class="lang-zh">Agent benchmark 使用可重复生成的合成数据和逐字段 oracle，覆盖菜品、预算、地点、店名、多轮上下文与安全边界。测试覆盖不等于线上准确率。</p><p class="lang-en">The Agent benchmark uses reproducible synthetic data and field-level oracles for dishes, budgets, locations, shop names, multi-turn context, and safety boundaries. Test coverage is not online accuracy.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="founder">
+      <div class="cb-wrap">
+        <div class="cb-section-heading">
+          <div><span class="cb-index">05 / THE FOUNDER'S ROLE</span><h2 class="lang-zh">不只是把功能做出来。<br><em>而是让产品持续向前。</em></h2><h2 class="lang-en">Not just shipping features.<br><em>Making the venture move forward.</em></h2></div>
+          <p class="lang-zh">创始人的工作横跨产品、商业和工程：判断先解决什么问题，决定哪些能力值得投入，把需求变成团队可执行的路线，再亲自深入关键系统并建立运营闭环。</p>
+          <p class="lang-en">The founder's work spans product, business, and engineering: deciding which problem to solve first, choosing where to invest, turning requirements into an executable roadmap, going deep on critical systems, and building the operating loop.</p>
+        </div>
+        <div class="cb-founder-grid">
+          <article><span>01 / DIRECTION</span><h3>产品方向与优先级</h3><p class="lang-zh">从学生、商户和校园运营三方需求出发，定义产品边界、版本目标和阶段性取舍，避免为了技术新鲜感堆砌功能。</p><p class="lang-en">Define product boundaries, release goals, and trade-offs around students, merchants, and campus operations—without adding technology for novelty alone.</p></article>
+          <article><span>02 / BUSINESS</span><h3>商业模式与价值交换</h3><p class="lang-zh">探索商户增值、校园运营服务和内容合作等路径，同时区分已经存在的产品能力与仍需市场验证的商业假设。</p><p class="lang-en">Explore merchant services, campus operations, and content partnerships while separating implemented product capabilities from business assumptions that still need market validation.</p></article>
+          <article><span>03 / ENGINEERING</span><h3>关键技术与系统交付</h3><p class="lang-zh">持续参与 Java 后端、UniApp 用户端、Vue 管理端、AI Agent、检索、QQBot 和跨仓库集成，保持对系统关键路径的直接理解。</p><p class="lang-en">Stay hands-on across the Java backend, UniApp student app, Vue operations console, AI agents, retrieval, QQBot, and cross-repository integration.</p></article>
+          <article><span>04 / OPERATIONS</span><h3>把运营能力产品化</h3><p class="lang-zh">将审核、商户入驻、内容治理、机器人策略、运行追踪和统计分析做成后台能力，让日常经营不依赖人工翻代码。</p><p class="lang-en">Productize moderation, merchant onboarding, content governance, bot policies, runtime tracing, and analytics so daily operations do not depend on manually inspecting code.</p></article>
+        </div>
+        <div class="cb-founder-quote"><span>THE OPERATING PRINCIPLE</span><blockquote class="lang-zh">先让信息可信，再让决策变聪明；先让运营跑得起来，再谈规模化。</blockquote><blockquote class="lang-en">Make information trustworthy before making decisions intelligent. Make operations repeatable before pursuing scale.</blockquote><small>FOUNDER / PRODUCT & ENGINEERING</small></div>
+      </div>
+    </section>
+
+    <section class="cb-section cb-section-alt" id="evidence">
+      <div class="cb-wrap">
+        <div class="cb-section-heading">
+          <div><span class="cb-index">06 / EVIDENCE & MATURITY</span><h2 class="lang-zh">用证据说话，<br><em>不把路线图写成成绩单。</em></h2><h2 class="lang-en">Evidence over claims.<br><em>A roadmap is not a results report.</em></h2></div>
+          <p class="lang-zh">CampusBites 的代码、PR、产品文档和评测资产能说明工程投入与系统范围；它们不能自动证明用户规模、商业收入或所有模块都已正式上线。</p>
+          <p class="lang-en">Code, pull requests, product documents, and evaluation assets show engineering scope and effort. They do not automatically prove user scale, revenue, or that every module is fully released.</p>
+        </div>
+        <div class="cb-evidence-grid">
+          <article><b>150 / 149</b><span>PR OPENED / MERGED</span><p class="lang-zh">统计 rainhotel 在四个核心仓库中的 PR 记录；合并目标包含功能和集成分支。</p><p class="lang-en">PR records for rainhotel across four core repositories; merge targets include feature and integration branches.</p></article>
+          <article><b>28</b><span>BACKEND MODULES</span><p class="lang-zh">当前开发树中的业务模块数量，覆盖身份、店铺、评价、搜索、推荐、商业化、治理和 AI。</p><p class="lang-en">Business modules in the current development tree, spanning identity, shops, reviews, search, recommendations, commerce, governance, and AI.</p></article>
+          <article><b>28</b><span>AGENT SEARCH CASES</span><p class="lang-zh">合成 benchmark 场景覆盖菜品、预算、位置、复合条件、多轮和安全边界；不使用生产用户数据。</p><p class="lang-en">Synthetic benchmark scenarios cover dishes, budgets, locations, compound constraints, multi-turn context, and safety boundaries; no production user data is used.</p></article>
+          <article><b>04</b><span>CORE PRODUCT REPOS</span><p class="lang-zh">后端、用户端、运营管理端、商家端四个核心仓库共同构成产品体系。</p><p class="lang-en">The backend, student app, operations console, and merchant portal form the four core product repositories.</p></article>
+        </div>
+        <div class="cb-boundaries">
+          <div><strong>WHAT IS NOT CLAIMED</strong><span>DAU · MAU · GMV · REVENUE · PAID MERCHANTS · RETENTION · CAMPUS CONTRACTS · ONLINE SLA</span></div>
+          <p class="lang-zh">这些指标需要真实运营数据、财务记录、合同或生产监控支持。当前案例不把创业计划中的目标值写成已达成结果，也不公开私有仓库源码、用户信息、密钥或内部运营数据。</p>
+          <p class="lang-en">These metrics require operating data, financial records, contracts, or production monitoring. This case does not present business-plan targets as achieved results and does not publish private source code, user information, credentials, or internal operating data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-contact" id="contact">
+      <div class="cb-wrap cb-contact-inner">
+        <span>BUILDING CAMPUSBites / FOUNDER-LED PRODUCT</span>
+        <h2 class="lang-zh">把真实问题，<br><em>做成长期有价值的产品。</em></h2>
+        <h2 class="lang-en">Build for real problems.<br><em>Create value that lasts.</em></h2>
+        <p class="lang-zh">如果你关注校园本地生活、产品创业、AI 应用与工程系统，欢迎交流合作。</p>
+        <p class="lang-en">Open to conversations around campus local-life products, product entrepreneurship, applied AI, and engineering systems.</p>
+        <div><a href="mailto:lilinhao5292006@163.com">lilinhao5292006@163.com ↗</a><a href="index.html#work"><span data-zh="返回全部项目" data-en="Back to all work">返回全部项目</span> ↑</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left"><a class="footer-mark" href="#top">L<span>.</span></a><span>© <b id="current-year"></b> LLH. ALL RIGHTS RESERVED.</span></div>
+    <div class="footer-right"><span class="lang-zh">创业者 · 产品构建者。</span><span class="lang-en">Founder · Product Builder.</span><a href="#top"><span data-zh="返回顶部" data-en="BACK TO TOP">返回顶部</span> ↑</a></div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

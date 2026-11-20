@@ -6,8 +6,6 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-HTML_FILE = ROOT / "index.html"
-JS_FILE = ROOT / "script.js"
 VOID_TAGS = {
     "area", "base", "br", "col", "embed", "hr", "img", "input", "link",
     "meta", "param", "source", "track", "wbr",
@@ -57,35 +55,59 @@ class SiteValidator(HTMLParser):
         self.stack.pop()
 
 
-def main() -> int:
+def validate_html(path: Path, required_ids: set[str]) -> tuple[SiteValidator, str]:
     parser = SiteValidator()
-    html = HTML_FILE.read_text(encoding="utf-8")
+    html = path.read_text(encoding="utf-8")
     parser.feed(html)
     parser.close()
 
     for fragment in parser.fragments:
         if fragment not in parser.ids:
-            parser.errors.append(f"broken in-page link: #{fragment}")
+            parser.errors.append(f"{path.name}: broken in-page link: #{fragment}")
 
-    source = JS_FILE.read_text(encoding="utf-8")
-    project_data = source.split("const projectDetails = {", 1)[1].split("  const dialog", 1)[0]
-    declared_projects = set(re.findall(r"(?m)^    ([a-z][a-z0-9_-]*):", project_data))
-    linked_projects = set(re.findall(r'data-open-project="([^"]+)"', html))
-    for project in sorted(linked_projects - declared_projects):
-        parser.errors.append(f"project dialog has no data entry: {project}")
-
-    required_ids = {"top", "about", "work", "opensource", "engineering", "contact", "project-grid", "project-dialog"}
     for required_id in sorted(required_ids - parser.ids):
-        parser.errors.append(f"required section or control missing: {required_id}")
+        parser.errors.append(f"{path.name}: required section or control missing: {required_id}")
 
     if parser.stack:
-        parser.errors.append("unclosed HTML tags: " + ", ".join(parser.stack))
+        parser.errors.append(f"{path.name}: unclosed HTML tags: " + ", ".join(parser.stack))
 
-    if parser.errors:
-        print("\n".join(f"ERROR: {error}" for error in parser.errors))
+    return parser, html
+
+
+def main() -> int:
+    home, home_html = validate_html(
+        ROOT / "index.html",
+        {"top", "about", "work", "opensource", "engineering", "contact", "project-grid", "project-dialog"},
+    )
+    case, case_html = validate_html(
+        ROOT / "campusbites.html",
+        {"top", "venture", "product", "business", "architecture", "founder", "evidence", "contact", "main-nav"},
+    )
+    errors = home.errors + case.errors
+
+    source = (ROOT / "script.js").read_text(encoding="utf-8")
+    project_data = source.split("const projectDetails = {", 1)[1].split("  const dialog", 1)[0]
+    declared_projects = set(re.findall(r"(?m)^    ([a-z][a-z0-9_-]*):", project_data))
+    linked_projects = set(re.findall(r'data-open-project="([^"]+)"', home_html))
+    for project in sorted(linked_projects - declared_projects):
+        errors.append(f"project dialog has no data entry: {project}")
+
+    if 'href="campusbites.html"' not in home_html:
+        errors.append("home page does not link to the CampusBites founder case")
+    if 'href="campusbites.css"' not in case_html:
+        errors.append("CampusBites case page does not load its stylesheet")
+    if 'src="script.js"' not in case_html:
+        errors.append("CampusBites case page does not load shared interactions")
+
+    if errors:
+        print("\n".join(f"ERROR: {error}" for error in errors))
         return 1
 
-    print(f"Validated {len(parser.ids)} unique IDs, {len(parser.fragments)} in-page links, and {len(linked_projects)} project dialogs.")
+    print(
+        f"Validated home ({len(home.ids)} IDs / {len(home.fragments)} anchors), "
+        f"CampusBites case ({len(case.ids)} IDs / {len(case.fragments)} anchors), "
+        f"and {len(linked_projects)} project dialogs."
+    )
     return 0
 
 
