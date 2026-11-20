@@ -1,14 +1,24 @@
 # LLH — Developer & Builder
 
-A bilingual personal portfolio for LLH, focused on software engineering, AI agent systems, backend engineering, and product building.
+A bilingual, evidence-first personal portfolio for LLH, focused on agent engineering, backend systems, and products built for real-world use.
+
+## V2 direction
+
+The portfolio is organized around engineering evidence rather than a technology checklist:
+
+- **Project cases** explain the problem, engineering role, design decisions, and verification boundary.
+- **Engineering notes** unpack concrete system flows from CampusBites QQBot, the AI Meal Agent, Xpert plugin architecture, and WeChatOAM file processing.
+- **Open source** links to 8 verified merged Xpert pull requests.
+- **Professional experience** summarizes SIEM Agent and Browser Agent work without publishing employer source code or confidential implementation.
+- **Evidence and privacy** are explicit: private repositories are summarized without credentials, user data, client information, or invented performance metrics.
 
 ## Design and interaction
 
-- Hybrid visual identity: editorial typography and calm surfaces with a dark, animated systems illustration.
+- Hybrid visual identity: editorial typography, technical diagrams, calm surfaces, and a dark animated systems illustration.
 - Chinese / English language toggle and light / dark theme toggle (both persisted locally).
 - Responsive navigation, project category filters, and bilingual case-study dialogs.
 - Scroll progress, active section navigation, reveal transitions, and reduced-motion support.
-- Static HTML, CSS, and JavaScript; no framework or build step required.
+- Static HTML, CSS, and JavaScript; no framework, package install, or bundler required.
 
 ## Run locally
 
@@ -18,25 +28,19 @@ python3 -m http.server 8000
 
 Open <http://localhost:8000>.
 
-## GitHub Pages deployment
+## Validation and deployment
 
-1. Open **Settings → Pages** in this repository.
-2. Set **Build and deployment → Source** to **GitHub Actions**.
-3. Push to `main`, or run **Deploy personal website to GitHub Pages** manually from the Actions tab.
+GitHub Actions runs the static-site validator and JavaScript syntax check before deploying to GitHub Pages. The workflow uses the official Pages deployment actions and least-privilege job permissions.
 
 Expected URL: <https://rainhotel.github.io/LLH_Personal_WebSite/>.
 
-The workflow uses the official Pages deployment actions and least-privilege job permissions.
-
-Deployment was verified on 2026-11-20. The published site returned a successful GitHub Pages deployment at the expected URL above; subsequent pushes to `main` are configured to trigger deployment automatically.
-
 ## Content accuracy and privacy
 
-- CampusBites is described from its project documentation and current product work. Private repositories are not linked.
-- WeChatOAM's stack is based on its `pom.xml`; the repository is private, so implementation details are summarized.
-- Xpert contributions link directly to selected merged pull requests.
+- CampusBites and WeChatOAM details are based on connected repository code, module documentation, and implementation records. The repositories are private, so no private source links are exposed.
+- Xpert contributions link directly to original pull requests. The page counts only PRs verified as merged.
 - SIEM Agent and Browser Agent are professional-experience summaries only. No employer source code, internal architecture, credentials, or sensitive operational data is published.
 - Studio work is described at a category level; client names and private deployments are not exposed.
+- No performance, user-scale, accuracy, or latency metrics are claimed without a verifiable source.
 
 ## Structure
 
@@ -45,11 +49,10 @@ Deployment was verified on 2026-11-20. The published site returned a successful 
 ├── index.html
 ├── styles.css
 ├── script.js
+├── scripts/
+│   └── validate_site.py
 ├── assets/
 │   ├── favicon.svg
 │   └── og-cover.svg
-├── .github/workflows/deploy.yml
-├── robots.txt
-├── sitemap.xml
-└── .nojekyll
+└── .github/workflows/deploy.yml
 ```
