@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rainhotel.github.io/LLH_Personal_WebSite/sitemap.xml
