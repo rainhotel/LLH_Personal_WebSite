@@ -28,6 +28,8 @@ Expected URL: <https://rainhotel.github.io/LLH_Personal_WebSite/>.
 
 The workflow uses the official Pages deployment actions and least-privilege job permissions.
 
+Deployment was verified on 2026-11-20. The published site returned a successful GitHub Pages deployment at the expected URL above; subsequent pushes to `main` are configured to trigger deployment automatically.
+
 ## Content accuracy and privacy
 
 - CampusBites is described from its project documentation and current product work. Private repositories are not linked.
