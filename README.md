@@ -20,9 +20,13 @@ Open <http://localhost:8000>.
 
 ## GitHub Pages deployment
 
-The repository includes `.github/workflows/deploy.yml`. The workflow enables GitHub Pages and deploys the static site when changes are pushed to `main`; it can also be run manually from the Actions tab.
+1. Open **Settings → Pages** in this repository.
+2. Set **Build and deployment → Source** to **GitHub Actions**.
+3. Push to `main`, or run **Deploy personal website to GitHub Pages** manually from the Actions tab.
 
 Expected URL: <https://rainhotel.github.io/LLH_Personal_WebSite/>.
+
+The workflow uses the official Pages deployment actions and least-privilege job permissions.
 
 ## Content accuracy and privacy
 
@@ -46,3 +50,4 @@ Expected URL: <https://rainhotel.github.io/LLH_Personal_WebSite/>.
 ├── robots.txt
 ├── sitemap.xml
 └── .nojekyll
+```
