@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101c22"/><stop offset="1" stop-color="#243b3b"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#b8ed8a" stop-opacity=".23"/><stop offset="1" stop-color="#b8ed8a" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="950" cy="320" r="350" fill="url(#glow)"/>
+  <g fill="none" stroke="#b9d9c5" stroke-opacity=".25"><circle cx="920" cy="315" r="115"/><circle cx="920" cy="315" r="180" stroke-dasharray="5 8"/><circle cx="920" cy="315" r="245"/></g>
+  <circle cx="920" cy="315" r="58" fill="#1c3334" stroke="#b8ed8a" stroke-opacity=".7"/>
+  <text x="920" y="326" fill="#f5f5f1" font-family="Arial,sans-serif" font-size="34" font-weight="700" text-anchor="middle">LLH</text>
+  <text x="86" y="100" fill="#b8ed8a" font-family="Arial,sans-serif" font-size="18" letter-spacing="5">PERSONAL SPACE / 2026</text>
+  <text x="82" y="278" fill="#f5f5f1" font-family="Arial,sans-serif" font-size="78" font-weight="700" letter-spacing="-4">Developer</text>
+  <text x="82" y="370" fill="#b8ed8a" font-family="Arial,sans-serif" font-size="78" font-weight="700" letter-spacing="-4">&amp; Builder.</text>
+  <text x="88" y="438" fill="#aabdb5" font-family="Arial,sans-serif" font-size="23">Turning complex ideas into useful systems.</text>
+  <text x="88" y="552" fill="#829990" font-family="monospace" font-size="14" letter-spacing="3">AI AGENTS  /  BACKEND SYSTEMS  /  PRODUCT BUILDING</text>
+</svg>
