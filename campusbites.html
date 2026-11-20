@@ -192,6 +192,41 @@
           <article><span>05 / OBSERVABILITY</span><h3>让运营能看见系统</h3><p class="lang-zh">运营后台把模型配置、运行状态、群组策略、检索证据、重排结果和失败原因放进可追踪的工作流，而不是只显示一个“AI 已开启”。</p><p class="lang-en">The operations console connects model configuration, runtime state, group policies, retrieval evidence, reranking, and failure reasons into an observable workflow—not just an “AI enabled” switch.</p></article>
           <article><span>06 / EVALUATION</span><h3>先建立评测，再谈效果</h3><p class="lang-zh">Agent benchmark 使用可重复生成的合成数据和逐字段 oracle，覆盖菜品、预算、地点、店名、多轮上下文与安全边界。测试覆盖不等于线上准确率。</p><p class="lang-en">The Agent benchmark uses reproducible synthetic data and field-level oracles for dishes, budgets, locations, shop names, multi-turn context, and safety boundaries. Test coverage is not online accuracy.</p></article>
         </div>
+        <div class="cb-system-details">
+          <div class="cb-system-heading"><span>IMPLEMENTATION NOTES / CODE-VERIFIED FLOWS</span><p class="lang-zh">把架构图落到真实代码路径：每个流程都对应具体服务、边界和失败处理，而不是概念图。</p><p class="lang-en">Move from architecture to code paths: each flow maps to concrete services, boundaries, and failure handling—not just a concept diagram.</p></div>
+          <div class="cb-detail-grid">
+            <article class="cb-detail-card">
+              <span>01 / MEAL AGENT GRAPH</span><h3>理解、检索、再校验</h3>
+              <p class="lang-zh">MealAgentGraphRunner 通过 StateGraph 编排 model_decision、public_read_tool、final_verify。搜索完成后回到模型进行候选选择；最终校验器核对候选来源、意图、店型、硬预算、地点和匹配阶段。</p>
+              <p class="lang-en">MealAgentGraphRunner orchestrates model_decision, public_read_tool, and final_verify through a StateGraph. After retrieval, control returns to the model for selection; the final validator checks source evidence, intent, shop type, hard budget, location, and match phase.</p>
+              <div class="cb-detail-flow"><b>MODEL</b><i>→</i><b>PUBLIC TOOL</b><i>↺</i><b>MODEL</b><i>→</i><b>VERIFY</b></div>
+              <small>MealAgentGraphRunner · MealAgentFinalConstraintValidator</small>
+            </article>
+            <article class="cb-detail-card">
+              <span>02 / QQBOT RETRIEVAL</span><h3>混合召回，不让模型编造事实</h3>
+              <p class="lang-zh">QqMealSearchService 组织多路召回、RRF 融合、硬约束过滤与店铺/品牌多样性控制；随后由重排模型处理有限的真实候选，最终由服务端事实字段渲染回复。</p>
+              <p class="lang-en">QqMealSearchService combines multiple recall routes with RRF fusion, hard-constraint filtering, and shop / brand diversification. A reranker handles a bounded set of real candidates; the server renders the reply from verified business facts.</p>
+              <div class="cb-detail-flow"><b>QUERY PLAN</b><i>→</i><b>RECALL</b><i>→</i><b>RRF</b><i>→</i><b>FILTER</b><i>→</i><b>RERANK</b></div>
+              <small>QqMealDecisionService · QqMealSearchService · QqMealAiService</small>
+            </article>
+            <article class="cb-detail-card">
+              <span>03 / HOME & SEARCH RANKING</span><h3>不同场景，不同排序目标</h3>
+              <p class="lang-zh">W3-1 将 HOME_MENU 与 SEARCH 分开。首页使用学校、地点、餐次和日期形成稳定排序种子，不加入随机项或广告；搜索保留原始相关度权重，店名精确匹配不能被口味画像覆盖。</p>
+              <p class="lang-en">W3-1 separates HOME_MENU from SEARCH. The home feed uses school, place, meal period, and date for stable ranking without randomness or ads. Search preserves relevance, and exact shop-name matches cannot be overridden by taste personalization.</p>
+              <div class="cb-ranking-pairs"><div><b>HOME_MENU</b><code>0.30T + 0.20Q + 0.25C + 0.05E + 0.20I − P</code></div><div><b>SEARCH</b><code>0.50R + 0.20T + 0.15Q + 0.05C + 0.10I − P</code></div></div>
+              <small>Wave 3 ranking design · W3-1 scene contract</small>
+            </article>
+            <article class="cb-detail-card">
+              <span>04 / SHOP DATA GOVERNANCE</span><h3>让标签有来源，也有审核状态</h3>
+              <p class="lang-zh">店铺标签分品类与风味两层；关联记录保留 AI、人工、商家、用户来源和置信度。AI 打标高置信结果可确认，低置信结果进入抽检；幂等写入避免重复标签。</p>
+              <p class="lang-en">Shop tags separate business categories from flavor attributes. Each association records its source—AI, manual, merchant, or user—and confidence. High-confidence AI tags can be confirmed; lower-confidence results go to review, with idempotent writes preventing duplicates.</p>
+              <div class="cb-tag-samples"><span>BUSINESS CATEGORY</span><b>麻辣烫 · 香锅</b><span>FLAVOR</span><b>辣 · 清淡</b><span>CONFIDENCE</span><b>≥ 0.75 → CONFIRMED</b></div>
+              <small>ShopTags · ShopTaggingResultParser · audit_status</small>
+            </article>
+          </div>
+          <p class="cb-system-footnote lang-zh">以上为当前开发代码树中的实现路径；功能是否进入正式发布版本，仍需按各仓库的集成和生产验收状态分别判断。</p>
+          <p class="cb-system-footnote lang-en">These flows are present in the current development code tree. Whether each capability is in a formal release must be assessed against repository integration and production acceptance separately.</p>
+        </div>
       </div>
     </section>
 
