@@ -68,7 +68,8 @@ def main() -> int:
             parser.errors.append(f"broken in-page link: #{fragment}")
 
     source = JS_FILE.read_text(encoding="utf-8")
-    declared_projects = set(re.findall(r"^    ([a-z][a-z0-9_-]*): \\{", source, re.MULTILINE))
+    project_data = source.split("const projectDetails = {", 1)[1].split("  const dialog", 1)[0]
+    declared_projects = set(re.findall(r"(?m)^    ([a-z][a-z0-9_-]*):", project_data))
     linked_projects = set(re.findall(r'data-open-project="([^"]+)"', html))
     for project in sorted(linked_projects - declared_projects):
         parser.errors.append(f"project dialog has no data entry: {project}")
