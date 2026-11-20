@@ -39,7 +39,7 @@ Expected URL: <https://rainhotel.github.io/LLH_Personal_WebSite/>.
 - CampusBites and WeChatOAM details are based on connected repository code, module documentation, and implementation records. The repositories are private, so no private source links are exposed.
 - CampusBites GitHub activity counts are explicitly scoped to four core repositories and dated; PR merge status is not presented as a production deployment metric.
 - CampusBites business-plan prices and revenue forecasts are treated as hypotheses, not realized commercial results. No DAU, GMV, paid-merchant, revenue, retention, signed-campus-contract, or uptime claims are made without verifiable evidence.
-- Agent benchmark cases use reproducible synthetic data, not production user data. Test coverage is not represented as online accuracy.
+- Agent benchmark uses user-style query cases over reproducible synthetic fixtures, not production user data. Test coverage is not represented as online accuracy.
 - Xpert contributions link directly to original pull requests. The page counts only PRs verified as merged.
 - SIEM Agent and Browser Agent are professional-experience summaries only. No employer source code, internal architecture, credentials, or sensitive operational data is published.
 - Studio work is described at a category level; client names and private deployments are not exposed.
