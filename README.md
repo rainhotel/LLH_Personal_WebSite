@@ -2,15 +2,13 @@
 
 A bilingual personal portfolio for LLH, focused on software engineering, AI agent systems, backend engineering, and product building.
 
-## Design direction
+## Design and interaction
 
 - Hybrid visual identity: editorial typography and calm surfaces with a dark, animated systems illustration.
-- Chinese / English language toggle.
-- Light / dark theme toggle, persisted locally.
-- Responsive navigation and project cards.
-- Project category filters and accessible case-study dialogs.
+- Chinese / English language toggle and light / dark theme toggle (both persisted locally).
+- Responsive navigation, project category filters, and bilingual case-study dialogs.
 - Scroll progress, active section navigation, reveal transitions, and reduced-motion support.
-- No framework or build step; the site is static HTML, CSS, and JavaScript.
+- Static HTML, CSS, and JavaScript; no framework or build step required.
 
 ## Run locally
 
@@ -20,14 +18,11 @@ python3 -m http.server 8000
 
 Open <http://localhost:8000>.
 
-## Deploy with GitHub Pages
+## GitHub Pages deployment
 
-The repository includes `.github/workflows/deploy.yml`.
+The repository includes `.github/workflows/deploy.yml`. The workflow enables GitHub Pages and deploys the static site when changes are pushed to `main`; it can also be run manually from the Actions tab.
 
-1. Open **Settings → Pages** in this repository.
-2. Set **Build and deployment → Source** to **GitHub Actions**.
-3. Push to `main`, or run **Deploy personal website to GitHub Pages** manually from the Actions tab.
-4. The expected site URL is <https://rainhotel.github.io/LLH_Personal_WebSite/>.
+Expected URL: <https://rainhotel.github.io/LLH_Personal_WebSite/>.
 
 ## Content accuracy and privacy
 
@@ -36,3 +31,18 @@ The repository includes `.github/workflows/deploy.yml`.
 - Xpert contributions link directly to selected merged pull requests.
 - SIEM Agent and Browser Agent are professional-experience summaries only. No employer source code, internal architecture, credentials, or sensitive operational data is published.
 - Studio work is described at a category level; client names and private deployments are not exposed.
+
+## Structure
+
+```text
+.
+├── index.html
+├── styles.css
+├── script.js
+├── assets/
+│   ├── favicon.svg
+│   └── og-cover.svg
+├── .github/workflows/deploy.yml
+├── robots.txt
+├── sitemap.xml
+└── .nojekyll
