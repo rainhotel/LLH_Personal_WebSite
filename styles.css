@@ -39,6 +39,7 @@ body { margin: 0; min-width: 320px; background: var(--bg); color: var(--ink); fo
 button, a { font: inherit; }
 a { color: inherit; text-decoration: none; }
 button { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 ::selection { background: rgba(99, 121, 237, .22); }
 .lang-en { display: none; }
 html[data-language="en"] .lang-zh { display: none !important; }
@@ -214,3 +215,4 @@ html[data-theme="dark"] .sun-icon { display: none; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
